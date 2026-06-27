@@ -285,7 +285,8 @@ video {
     font-weight: 900;
 }
 
-.yootheme-about h1 {
+.yootheme-about h1,
+.yootheme-about h2 {
     max-width: 440px;
     margin: 0 0 18px;
     color: #ffffff;
@@ -372,6 +373,18 @@ button {
 button:hover {
     color: #ffffff;
     background: var(--orange-2);
+}
+
+.button-filled {
+    color: #111111;
+    background: var(--orange-2);
+    border-color: var(--orange-2);
+}
+
+.button-filled:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #111111;
 }
 
 .button-light {
@@ -959,6 +972,12 @@ textarea {
     color: #ffffff;
     background: #25d366;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.34);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .whatsapp-float span {
@@ -969,15 +988,86 @@ textarea {
     clip: rect(0, 0, 0, 0);
 }
 
-.whatsapp-float::before {
-    content: "☎";
-    font-size: 30px;
-    line-height: 1;
+.whatsapp-float svg {
+    width: 30px;
+    height: 30px;
+    fill: #ffffff;
 }
 
 .page-content {
     line-height: 1.8;
     margin-top: 24px;
+}
+
+.section-services-list {
+    background: var(--dark-2);
+}
+
+.section-services-list h2 {
+    max-width: 600px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin: 36px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.services-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.services-list li:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.services-list li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--orange-2);
+}
+
+.footer-social {
+    display: flex;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--muted);
+    margin-bottom: 0;
+    transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.footer-social a:hover {
+    color: var(--orange-2);
+    border-color: var(--orange-2);
+}
+
+.footer-social svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
 }
 
 @media (max-width: 980px) {
@@ -1016,7 +1106,7 @@ textarea {
     }
 
     .vitrine-hero {
-        min-height: auto;
+        min-height: 0;
         padding: 90px 0;
     }
 
