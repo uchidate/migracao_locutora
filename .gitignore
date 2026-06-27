@@ -1,0 +1,36 @@
+# WordPress core (não versionado — instalado pelo servidor)
+wp-admin/
+wp-includes/
+wp-*.php
+xmlrpc.php
+license.txt
+readme.html
+index.php
+default.php
+
+# Config sensível
+wp-config.php
+.htaccess
+.htaccess.bk
+.private/
+
+# Uploads e cache
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup-db/
+
+# Plugins da Hostinger (gerenciados pelo painel)
+wp-content/plugins/
+
+# Temas padrão do WordPress
+wp-content/themes/twenty*/
+
+# Assets binários grandes (ficam no servidor)
+wp-content/themes/locutora/assets/site-images/
+
+# Ferramentas locais
+.tmp-playwright/
+node_modules/
+.DS_Store
+*.log
